@@ -1,12 +1,16 @@
 import React from "react";
 import Header from "./components/header/Header";
 import "./App.css";
+import Home from "./components/home/home";
 
 function App() {
   return (
-    <main>
+    <>
       <Header />
-    </main>
+      <main className="main">
+        <Home />
+      </main>
+    </>
   );
 }
 
