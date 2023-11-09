@@ -1,7 +1,9 @@
-import React from "react";
-import Header from "./components/header/Header";
 import "./App.css";
-import Home from "./components/home/home";
+
+import About from "./components/about/About";
+import Header from "./components/header/Header";
+import Home from "./components/home/Home";
+import React from "react";
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       <Header />
       <main className="main">
         <Home />
+        <About />
       </main>
     </>
   );
