@@ -114,24 +114,25 @@ img {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.section {
+section {
   padding: 6rem 0 2rem;
-}
 
-.section-title {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
-}
+  .title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    text-transform: uppercase;
+  }
 
-.section-subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: 4rem;
-}
+  .subtitle {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: 4rem;
+  }
 
-.section-title,
-.section-subtitle {
-  text-align: center;
+  .title,
+  .subtitle {
+    text-align: center;
+  }
 }
 
 /*=============== LAYOUT ===============*/
@@ -193,12 +194,12 @@ img {
     margin: 0 0 var(--header-height) 0;
   }
 
-  .section {
+  section {
     padding: 2rem 0 4rem;
-  }
 
-  .section-subtitle {
-    margin-bottom: var(--mb-3);
+    .subtitle {
+      margin-bottom: var(--mb-3);
+    }
   }
 }
 

@@ -4,9 +4,9 @@ import React from "react";
 import Service from "./service";
 
 const Services = () => (
-  <section className="services section" id="services">
-    <h2 className="section-title">My Services</h2>
-    <p className="section-subtitle">What I offers</p>
+  <section className="services" id="services">
+    <h2 className="title">My Services</h2>
+    <p className="subtitle">What I offers</p>
 
     <div className="container grid">
       <Service name="Web Development" icon="uil-web-grid">

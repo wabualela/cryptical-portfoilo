@@ -6,9 +6,9 @@ import Info from "./Info";
 import React from "react";
 
 const About = () => (
-  <section id="about" className="about section">
-    <h2 className="section-title">About ME</h2>
-    <p className="section-subtitle">My Introduction</p>
+  <section id="about" className="about">
+    <h2 className="title">About ME</h2>
+    <p className="subtitle">My Introduction</p>
 
     <div className="about-container container grid">
       <img src={AboutImg} alt="Wail Abualela" className="about-img" />
