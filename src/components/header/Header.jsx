@@ -1,9 +1,20 @@
-import React, { useState } from "react";
-import * as Unicons from "@iconscout/react-unicons";
 import "./Header.css";
+
+import React, { useState } from "react";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false); // Toggle Menu
+  const [activeNav, setActiveNav] = useState("#home"); //Active Menu
+
+  // toggle scrollup btn
+  window.addEventListener("scroll", () => {
+    let scrollUp = document.querySelector(".scrollup");
+    if (window.scrollY >= 560) {
+      scrollUp.classList.toggle("show");
+    } else {
+      scrollUp.classList.toggle("show");
+    }
+  });
 
   return (
     <header className="header">
@@ -13,56 +24,75 @@ const Header = () => {
         </a>
         <div className={toggle ? "nav-menu show-menu" : "nav-menu"}>
           <ul className="nav-list">
-            <li className="nav__item">
-              <a href="#home" className="nav-link active-link">
-                <Unicons.UilEstate className="nav-icon" /> Home
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#about" className="nav-link">
-                <Unicons.UilUser className="nav-icon" /> About
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#skills" className="nav-link">
-                <Unicons.UilFileAlt className="nav-icon" /> Skills
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#services" className="nav-link">
-                <Unicons.UilBriefcaseAlt className="nav-icon" /> Services
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#portfolio" className="nav-link">
-                <Unicons.UilScenery className="nav-icon" /> Portfolio
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a href="#contact" className="nav-link">
-                <Unicons.UilMessage className="nav-icon" /> Contact
-              </a>
-            </li>
+            <NavItem
+              title="Home"
+              click={() => setActiveNav("#home")}
+              active={activeNav === "#home"}
+              href="#home"
+              icon="uil-estate"
+            />
+            <NavItem
+              click={() => setActiveNav("#about")}
+              active={activeNav === "#about"}
+              title="About"
+              href="#about"
+              icon="uil-user"
+            />
+            <NavItem
+              click={() => setActiveNav("#skills")}
+              active={activeNav === "#skills"}
+              title="Skills"
+              href="#skills"
+              icon="uil-file-alt"
+            />
+            <NavItem
+              click={() => setActiveNav("#services")}
+              active={activeNav === "#services"}
+              title="Service"
+              href="#services"
+              icon="uil-briefcase-alt"
+            />
+            <NavItem
+              click={() => setActiveNav("#qualifications")}
+              active={activeNav === "#qualifications"}
+              title="Qualifications"
+              href="#qualifications"
+              icon="uil-scenery"
+            />
+            <NavItem
+              click={() => setActiveNav("#contact")}
+              active={activeNav === "#contact"}
+              title="Contact"
+              href="#contact"
+              icon="uil-message"
+            />
           </ul>
           {/* // TODO: add button */}
-          <Unicons.UilTimes
-            className="nav-icon nav-close"
+          <i
+            className="uil uil-times nav-icon nav-close"
             onClick={() => setToggle(!toggle)}
           />
         </div>
         {/* // TODO: add button */}
-        <Unicons.UilApps
-          className="nav-toggle"
+        <i
+          className="uil uil-apps nav-toggle"
           onClick={() => setToggle(!toggle)}
         />
       </nav>
     </header>
   );
 };
+
+const NavItem = ({ title, href, icon, click, active }) => (
+  <li className="nav__item">
+    <a
+      href={href}
+      className={active ? "nav-link active-link" : "nav-link"}
+      onClick={click}
+    >
+      <i className={`uil ${icon} nav-icon`} /> {title}
+    </a>
+  </li>
+);
 
 export default Header;

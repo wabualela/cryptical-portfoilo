@@ -40,7 +40,7 @@
 /* Active link */
 .active-link,
 .nav-link:hover {
-  column-rule: var(--title-color-dark);
+  color: var(--title-color-dark);
 }
 
 /*=============== BREAKPOINTS ===============*/
