@@ -1,0 +1,14 @@
+# Copyright VMware, Inc.
+# SPDX-License-Identifier: APACHE-2.0
+
+version: '2'
+
+services:
+  node:
+    tty: true # Enables debugging capabilities when attached to this container.
+    image: docker.io/bitnami/node:20
+    command: sh -c 'yarn && yarn run dev --host'
+    ports:
+      - 5173:5173
+    volumes:
+      - .:/app
