@@ -7,8 +7,8 @@ services:
   node:
     tty: true # Enables debugging capabilities when attached to this container.
     image: docker.io/bitnami/node:20
-    command: sh -c 'yarn && yarn run dev --host'
+    command: sh -c 'yarn && yarn dev --host'
     ports:
-      - 5173:5173
+      - 80:80
     volumes:
       - .:/app
