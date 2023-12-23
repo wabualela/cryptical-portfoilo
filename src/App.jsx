@@ -10,6 +10,7 @@ import ScrollUp from "./components/scrollup/ScrollUp";
 import Services from "./components/services/Services";
 import Skills from "./components/skills/Skills";
 import Testimonials from "./components/testimonials/Testimonials";
+import Work from "./components/Work/Work";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Skills />
         <Services />
         <Qualifications />
+        <Work />
         <Testimonials />
         <Contact />
       </main>

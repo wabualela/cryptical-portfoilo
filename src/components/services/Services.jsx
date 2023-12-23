@@ -1,7 +1,7 @@
 import "./Services.css";
 
 import React from "react";
-import Service from "./service";
+import Service from "./Service";
 
 const Services = () => (
   <section className="services" id="services">

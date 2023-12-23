@@ -1,5 +1,4 @@
 import React from "react";
-import { UilArrowDown } from "@iconscout/react-unicons";
 
 const ScrollDown = () => {
   return (
@@ -41,7 +40,7 @@ const ScrollDown = () => {
           ></path>
         </svg>
         <span className="home-scroll-name">Scroll Down</span>
-        <UilArrowDown className="home-scroll-arrow" />
+        <i className="uil uil-arrow-down home-scroll-arrow" />
       </a>
     </div>
   );

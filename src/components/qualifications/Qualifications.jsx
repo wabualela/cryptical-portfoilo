@@ -1,4 +1,4 @@
-import "./qualifications.css";
+import "./Qualifications.css";
 
 import React, { useState } from "react";
 
