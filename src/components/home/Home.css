@@ -59,15 +59,15 @@
 }
 
 .home-img {
-    background: url(../../assets/me-with-suit.png);
+    background: url(../../assets/me.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    box-shadow: inset 0 0 0 9px rgba(255 255 255 / 30%);
+    box-shadow: inset 0 0 0 9px rgba(0 0 0 / 30%);
     order: 1;
     justify-self: center;
     width: 300px;
-    height: 500px;
+    height: 300px;
     animation: profile-animation 4s ease-in-out infinite 1s;
 }
 
@@ -146,7 +146,7 @@
     .home-img {
         width: 250px;
         height: 250px;
-        box-shadow: inset 0 0 0 8px rgba(255 255 255 / 30%);
+        box-shadow: inset 0 0 0 8px rgba(0 0 0 / 30%);
     }
 
     .home-scroll {
