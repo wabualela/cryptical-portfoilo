@@ -64,7 +64,7 @@ const Header = () => {
               active={activeNav === "#portfolio"}
               title="Portolio"
               href="#portfolio"
-              icon="uil-scene"
+              icon="uil-arrow"
             />
             <NavItem
               click={() => setActiveNav("#contact")}
