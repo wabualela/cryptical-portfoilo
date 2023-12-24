@@ -3,7 +3,7 @@ import Work2 from "../../assets/work2.jpg";
 import Work3 from "../../assets/work3.jpg";
 import Work4 from "../../assets/work4.jpg";
 
-export const projects = [
+export const projectsData = [
     {
         id: 1,
         image: Work1,
@@ -33,15 +33,15 @@ export const projects = [
 
 export const projectsNav = [
     {
-        name: "all",
+        title: "all",
     },
     {
-        name: "Moodle Plugin",
+        title: "Moodle Plugin",
     },
     {
-        name: "Web",
+        title: "Web",
     },
     {
-        name: "E-Learning",
+        title: "E-Learning",
     },
 ];
