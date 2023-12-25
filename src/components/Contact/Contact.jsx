@@ -1,12 +1,46 @@
+/* eslint-disable react/prop-types */
+
 import "./Contact.css";
 
-import React from "react";
+import React, { useRef } from "react";
+
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const Contact = () => {
+  let form = useRef();
+  let [msg, setMsg] = useState("");
+
+  let sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_amat2lf",
+        "template_2nqwglf",
+        form.current,
+        "0y1KPL1IRJ8rthidc"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setMsg(
+            "Thank you for reaching out to me. I have received your email and will get back to you soon."
+          );
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+    setTimeout(() => setMsg(""), 8000);
+  };
+
   return (
     <section className="contact" id="contact">
       <h2 className="title">Get in Touch</h2>
-      <p className="subtitle">Contact ME</p>
+      <p className="subtitle">Contact mE</p>
+      <div className={`${msg ? "show" : ""} alert-success `}>{msg}</div>
 
       <div className="container grid">
         <div className="content">
@@ -16,80 +50,72 @@ const Contact = () => {
               title="Email"
               subtitle="wailabualela@gmail.com"
               icon="bx-mail-send"
-              href="mailto:wailabualela@gmail.com "
+              link="mailto:wailabualela@gmail.com "
+              label="Email me"
             />
             <ContactCard
               title="WhatsApp"
               subtitle="+249 91 285 7030"
               icon="bxl-whatsapp"
-              href="https://wa.me/+249912857030"
+              link="https://wa.me/+249912857030"
+              label="Chat with me"
             />
             <ContactCard
               title="Linkedin"
               subtitle="Connect with me"
               icon="bxl-linkedin"
-              href="https://www.linkedin.com/in/wabualela"
+              link="https://www.linkedin.com/in/wabualela"
+              label="Connect with me"
             />
           </div>
         </div>
 
         <div className="content">
-          <h3 className="contact-title">Write me your project</h3>
+          <h3 className="contact-title">Write me your business</h3>
 
-          <form className="contact-form">
+          <form ref={form} onSubmit={sendEmail} className="contact-form">
             <div className="form-group">
-              <label htmlFor="name" className="form-label">
-                Full name
-              </label>
+              <label className="form-label">Full name</label>
               <input
                 type="text"
-                id="name"
-                aria-describedby="name"
+                name="name"
                 className="form-control"
                 placeholder="First name and last name"
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email" className="form-label">
-                Email Address
-              </label>
+              <label className="form-label">Email Address</label>
               <input
                 type="email"
-                id="email"
-                aria-describedby="email"
+                name="email"
                 className="form-control"
                 placeholder="someone@example.com"
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="phone" className="form-label">
-                Contact number
-              </label>
+              <label className="form-label">Contact number</label>
               <input
                 type="tel"
-                id="phone"
-                aria-describedby="phone"
+                name="phone"
                 className="form-control"
                 placeholder="For contact and Whatsapp"
               />
             </div>
 
             <div className="form-group form-textarea">
-              <label htmlFor="project" className="form-label">
-                Project
-              </label>
+              <label className="form-label">Business</label>
               <textarea
-                id="project"
+                name="business"
                 cols="30"
                 rows="10"
                 className="form-control"
-                placeholder="Please write a description about your project"
+                placeholder="Please write a description about your business"
               ></textarea>
             </div>
 
-            <button className="btn btn-flex">
+            <button type="submit" className="btn btn-flex">
               Send message
               <svg
                 className="btn-icon"
@@ -116,13 +142,18 @@ const Contact = () => {
   );
 };
 
-let ContactCard = ({ title, subtitle, href, icon }) => (
+let ContactCard = ({ title, subtitle, link, icon, label = "Write Me" }) => (
   <div className="contact-card">
     <i className={`bx ${icon} bx-contact contact-card-icon`} />
     <h4 className="contact-card-title">{title}</h4>
     <p className="contact-card-subtitle">{subtitle}</p>
-    <a href={href} className="contact-card-btn" target="_blank">
-      Write Me
+    <a
+      href={link}
+      className="contact-card-btn"
+      target="_blank"
+      rel="noreferrer"
+    >
+      {label}
       <i className="bx bx-right-arrow-alt contact-card-btn-icon" />
     </a>
   </div>
