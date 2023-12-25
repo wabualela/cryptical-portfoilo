@@ -1,6 +1,6 @@
 import "./About.css";
 
-import AboutImg from "../../assets/me.jpg";
+import AboutImg from "../../assets/img/me.jpg";
 import CV from "../../assets/Resume-Wail-Abualela.pdf";
 import Info from "./Info";
 import React from "react";
@@ -15,12 +15,30 @@ const About = () => (
 
       <div className="about-data">
         <Info />
-
         <p className="about-description">
-          As a FullStack Developer, I help you get started with your online
-          business, and as a Moodle Developer I will provide you with the help
-          you need to get started your online e-learning platform, I have a
-          {new Date().getFullYear() - 2017} years experiences build web apps.
+          As a dedicated web developer with a strong background in online
+          education solutions. As a seasoned professional, I specialize in
+          maintaining, managing, and developing Moodle-based e-learning
+          platforms. My expertise extends to crafting and refining WordPress
+          front-end websites to enhance user experiences in the realm of digital
+          education.
+        </p>
+        <p className="about-description">
+          Armed with a Bachelor of Computer Studies degree from National Ribat
+          University and recognized as a Red Hat Certified System Administrator,
+          I bring a solid foundation to my work. My proficiency in using Laravel
+          and InertiaJS for backend development, coupled with a mix of
+          Bootstrap, Tailwindcss, and ReactJS for frontend, ensures a
+          well-rounded approach to web development.
+        </p>
+        <p className="about-description">
+          I prioritize efficiency and security, utilizing platforms like
+          DigitalOcean and Laravel Forge for streamlined deployment. Committed
+          to staying abreast of new web technologies, I constantly strive for
+          coding perfection. My collaborative and teamwork-oriented approach
+          reflects not only in my role but also in my commitment to advancing
+          online education. If you have any queries or need assistance, feel
+          free to reach out. Best regards, Wail
         </p>
         <a href={CV} download="" className="btn btn-flex">
           Download CV

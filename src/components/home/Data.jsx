@@ -55,12 +55,21 @@ const Data = () => {
           ></path>
         </svg>
       </h1>
-      <h2 className="home-subtitle">Web Apps Developer</h2>
+      <h2 className="home-subtitle">Web Developer</h2>
       <p className="home-description">
-        Hello there, I'm a Web Applications developer located at Kampala,
-        Uganda, and I'm had a {new Date().getFullYear() - 2017} experience in
-        developing different size and shape of web apps for my client, please
-        check my work below.
+        Hey there! 😊 I'm &nbsp;
+        <span className="tooltip">
+          Wail
+          <p className="tooltip-text">
+            "Wail" is pronounced as "way-el." Just blend the "w" sound from
+            "well," the "ai" as in "eye," and the "l" sound from "like." Feel
+            free to say "way-el" for a perfect pronunciation!
+          </p>
+        </span>
+        , your friendly neighborhood Web Applications developer stationed in
+        Kampala, Uganda. I've got a cool {new Date().getFullYear() - 2017} years
+        under my belt, whipping up all sorts of web apps for my awesome clients.
+        Take a peek at some of the cool stuff I've cooked up below! 👇
       </p>
       <a href="#contact" className="btn btn-flex">
         Say hello

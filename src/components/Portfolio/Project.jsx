@@ -9,10 +9,17 @@ const Project = ({ projectData }) => {
         className="card-img"
       />
       <h3 className="card-title">{projectData.title}</h3>
-      <a href="" className="card-link">
-        Demo
-        <i className="bx bx-right-arrow-alt card-link-icon"></i>
-      </a>
+      {projectData.link && (
+        <a
+          href={projectData.link}
+          target="_blank"
+          rel="noreferrer"
+          className="card-link"
+        >
+          Demo
+          <i className="bx bx-right-arrow-alt card-link-icon"></i>
+        </a>
+      )}
     </div>
   );
 };

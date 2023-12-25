@@ -43,53 +43,65 @@ const Qualifications = () => {
             <Qualification
               above={false}
               title="Moodle Senior Developer"
-              subtitle="Kampala Uganda - IZDIAD Ltd."
-              years="2023 - Present"
+              subtitle="Izdiad Uganda"
+              years="July 2023 - Present"
             />
             <Qualification
               above={true}
-              title="FullStack Developer"
-              subtitle="Remote - KHALIL PLATFORM"
-              years="2022 - 2022"
+              title="Moodle Senior Developer"
+              subtitle="Izdiad Sudan"
+              years="Jan 2023 - Jul 2023"
             />
             <Qualification
               above={false}
-              title="FullStack Developer"
-              subtitle="Freelancer"
-              years="2022 - 2022"
+              title="FullStack PHP Developer"
+              subtitle="KHALIL platform - remote"
+              years="Nov 2022 - Jan 2022"
             />
             <Qualification
               above={true}
-              title="Moodle Developer"
-              subtitle="Innovative Solutions Ltd."
-              years="2017 - 2021"
+              title="Backend Developer"
+              subtitle="Intelligent Project"
+              years="Jul 2021 - Oct 2021"
+            />
+            <Qualification
+              above={false}
+              title="Backend developer"
+              subtitle="MSC"
+              years="Mar 2021 - Jul 2021"
+            />
+            <Qualification
+              above={true}
+              title="Senior Moodle Developer"
+              subtitle="Innovative Solutions"
+              years="Oct 2019 - Nov 2020"
+            />
+            <Qualification
+              above={false}
+              title="Backend Developer"
+              subtitle="Click Grafix"
+              years="Jun 2019 - Sep 2019"
+            />
+            <Qualification
+              above={true}
+              title="Senior Moodle Developer"
+              subtitle="Innovative Solutions"
+              years="Nov 2017 - Jun 2019"
+            />
+            <Qualification
+              above={false}
+              title="Teaching assistant"
+              subtitle="International University of Afriac"
+              years="May 2015 - May 2016"
             />
           </div>
 
           <div className={active ? "content" : "content content-active"}>
             <Qualification
               above={true}
-              title="Moodle Senior Developer"
-              subtitle="Kampala Uganda - IZDIAD Ltd."
-              years="2023 - Present"
-            />
-            <Qualification
-              above={false}
-              title="FullStack Developer"
-              subtitle="Remote - KHALIL PLATFORM"
-              years="2022 - 2022"
-            />
-            <Qualification
-              above={true}
-              title="FullStack Developer"
-              subtitle="Freelancer"
-              years="2022 - 2022"
-            />
-            <Qualification
-              above={false}
-              title="Moodle Developer"
-              subtitle="Innovative Solutions Ltd."
-              years="2017 - 2021"
+              title="Bachelor of Computer Science"
+              subtitle="National Ribat University"
+              years="2010 - 2014"
             />
           </div>
         </div>
@@ -105,7 +117,7 @@ let Qualification = ({ title, subtitle, years, above }) => (
         <div></div>
         <div>
           <i className="rounder" />
-          <i className="line"/>
+          <i className="line" />
         </div>
       </>
     )}

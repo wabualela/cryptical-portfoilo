@@ -39,7 +39,7 @@
     border-radius: 1rem;
 
     .card-img {
-      width: 295px;
+      width: 300px;
       border-radius: 1rem;
       margin-bottom: var(--mb-1);
     }
@@ -47,6 +47,7 @@
     .card-title {
       font-size: var(--normal-font-size);
       font-weight: var(--font-medium);
+      width: 300px;
     }
 
     .card-link {
@@ -102,6 +103,13 @@
     .container {
       grid-template-columns: 1fr;
     }
+    .filters {
+      flex-direction: column;
+      column-gap: 0.25rem;
+      .filter-item {
+        font-size: var(--small-font-size);
+      }
+    }
     .card {
       .card-img {
         width: 100%;
@@ -116,7 +124,7 @@
       grid-template-columns: 1fr;
     }
     .filters {
-        column-gap: .25rem;
+      column-gap: 0.25rem;
       .filter-item {
         font-size: var(--small-font-size);
       }
